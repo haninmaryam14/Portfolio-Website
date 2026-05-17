@@ -1,0 +1,101 @@
+/* ==========================================================================
+   CV SECTION GRADIENT FADE-IN LAYER
+   ========================================================================== */
+
+.cv-fade-section {
+    position: relative;
+    color: #0f172a !important;
+    background-color: #ffffff00;
+    min-height: 100vh;
+    
+    /* Mengatur padding atas-bawah agar ruang tinggi section seimbang dengan portfolio */
+    padding: 140px 0;
+    width: 100%;
+    z-index: 2;
+}
+
+/* ==========================================================================
+   CV CONTAINER LAYOUT (MATCHING PORTFOLIO SIZE)
+   ========================================================================== */
+
+.cv-container {
+    position: relative;
+    z-index: 3;
+    
+    /* MENYAMAKAN UKURAN: Sesuaikan dengan max-width & padding portfolio-container kamu */
+    width: 100%;
+    max-width: 1200px; /* Jika max-width portfolio kamu 1100px atau 1200px, samakan di sini */
+    margin: 0 auto;
+    padding: 0 200px 0 200px;  /* Jarak aman di sisi kanan-kiri monitor */
+    box-sizing: border-box;
+}
+
+/* Menyelaraskan teks judul Curriculum Vitae agar sejajar dengan gaya portfolio */
+.cv-header {
+    text-align: left; /* Mengikuti gaya penulisan portfolio yang rata kiri */
+    margin-bottom: 60px;
+    max-width: 800px; /* Batasan lebar teks deskripsi sub-judul agar nyaman dibaca */
+}
+
+.cv-download-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    text-decoration: none;
+}
+
+.cv-download-img {
+    width: 260px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+    transition: transform 0.25s ease;
+}
+
+.cv-download-link:hover .cv-download-img {
+    transform: translateY(-6px);
+}
+
+.cv-title {
+    font-size: 2.5rem; /* Menyamakan ukuran h1 portfolio */
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: inherit;
+    color: #ffffff;
+}
+
+.cv-subtitle {
+    font-size: 1rem;
+    color: #657284; /* Warna abu-abu halus agar senada dengan portfolio */
+    line-height: 1.6;
+}
+
+/* Mengatur ukuran pembungkus folder card CV */
+.cv-folder-wrapper {
+    display: flex;
+    justify-content: flex-start; /* Menjaga posisi folder tetap di kiri/sejajar text atas */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cv-folder-card {
+    display: block;
+    width: 100%;
+    max-width: 260px; /* Mengunci lebar folder CV agar ukurannya pas dan tidak raksasa */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cv-folder-card:hover {
+    transform: translateY(-5px);
+}
+
+.cv-folder-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
