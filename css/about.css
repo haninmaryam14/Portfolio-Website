@@ -1,0 +1,262 @@
+/* ==========================================================================
+   STYLE KHUSUS UNTUK SECTION ABOUT ME
+   ========================================================================== */
+
+.about-section {
+    width: 100%;
+    min-height: 100vh; /* Memaksa section minimal setinggi satu layar penuh monitor */
+    padding-top: 140px;
+    padding-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 1200px; /* Sedikit dilebarkan ruangnya agar pergeseran terlihat natural */
+    
+    /* MODIFIKASI DI SINI: */
+    /* format: atas (0) kanan (220px) bawah (0) kiri (80px) */
+    padding: 0 200px 0 200px; 
+    
+    margin: 0 auto;
+}
+
+.page-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+.info-block {
+    margin-bottom: 40px;
+}
+
+.info-block h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.info-block p {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+/* Custom Pill Tags */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.custom-tag {
+    border: 1px solid #4361ee;
+    color: #8fa3ff;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background: rgba(67, 97, 238, 0.05);
+}
+
+.hobby-tags {
+    margin-bottom: 45px;
+}
+
+/* Spotify Layout */
+.spotify-block {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin: 50px 0;
+}
+
+/* --- Setelan Awal Wrapper Kontainer Gambar --- */
+.spotify-avatar-wrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #4361ee;
+    box-shadow: 0 0 25px rgba(67, 97, 238, 0.4);
+    flex-shrink: 0;
+    
+    /* Memastikan link di dalamnya memenuhi area lingkaran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Setelan Dasar Link & Gambar Avatar --- */
+.spotify-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* --- Setelan Dasar Gambar Avatar --- */
+.spotify-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    
+    /* MODIFIKASI: Gunakan transisi 'cubic-bezier' untuk efek mouse leave yang sangat mulus */
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+    /* Memastikan render gambar tetap tajam saat diperbesar */
+    will-change: transform;
+}
+
+/* --- Efek Mouse Enter (Hover): Membesar dan Berputar --- */
+.spotify-avatar-wrapper:hover .spotify-avatar {
+    /* MODIFIKASI: Diperbesar jadi 1.15 (15%) agar efeknya lebih 'terasa' */
+    transform: scale(1.15) rotate(360deg);
+}
+
+.spotify-info h3 {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.spotify-info h4 {
+    font-size: 1.9rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.spotify-info p {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* My MBTI Layout & Arch Card */
+.mbti-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 50px 0 20px 0;
+}
+
+.mbti-info {
+    flex: 1;
+}
+
+.mbti-info h3 {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.mbti-info h4 {
+    font-size: 2.4rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.mbti-info p {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+.mbti-card-wrapper {
+    width: 210px;
+    height: 250px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.mbti-glow-card {
+    width: 100%;
+    height: 100%;
+    background: #11184e;
+    border-radius: 105px 105px 25px 25px; /* Bentuk lengkungan arch kubah figma */
+    border: 2px solid #4361ee;
+    box-shadow: 0 0 35px rgba(67, 97, 238, 0.5);
+    overflow: hidden;
+}
+
+.mbti-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Responsive untuk Smartphone */
+@media (max-width: 650px) {
+    .about-container {
+        padding: 0 24px;
+    }
+    .page-title {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .info-block {
+        margin-bottom: 32px;
+    }
+    .tag-container {
+        justify-content: center;
+    }
+    .spotify-block,
+    .mbti-block {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .spotify-avatar-wrapper {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+    .spotify-info h4 {
+        font-size: 1.6rem;
+    }
+    .spotify-info p,
+    .info-block p,
+    .mbti-info p {
+        font-size: 0.95rem;
+    }
+    .mbti-card-wrapper {
+        width: 180px;
+        height: 210px;
+        margin: 20px auto 0 auto;
+    }
+    .mbti-info h4 {
+        font-size: 2rem;
+    }
+}
+
+/* ==========================================================================
+   ANIMASI SCROLL (FADE IN UP)
+   ========================================================================== */
+
+/* Kondisi awal: komponen tidak terlihat (opacity 0) dan tergeser ke bawah (50px) */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity, transform;
+}
+
+/* Kondisi akhir saat komponen masuk ke area layar: naik ke posisi semula dan terlihat */
+.scroll-animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
